@@ -1,36 +1,137 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+#  EkoLens
 
-## Getting Started
+> Smarter ways to navigate Lagos.
 
-First, run the development server:
+EkoLens is a community-powered mobility platform designed to make commuting across Lagos easier, faster, and more transparent.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Instead of relying on guesswork or asking strangers, EkoLens helps users discover:
+
+-  Public transport routes
+-  Estimated fares
+-  Boarding and drop-off points
+-  Important landmarks
+-  Estimated travel times
+-  Traffic insights
+-  Community-contributed transport updates
+
+Our mission is to build the most reliable transport intelligence platform for Lagos and eventually power smarter mobility across Africa.
+
+---
+
+##  Vision
+
+We're not just building a route finder.
+
+EkoLens aims to become the operating system for urban mobility in Lagos by combining:
+
+- Community-powered transport data
+- Smart route recommendations
+- Digital maps
+- Ride-hailing services
+- Business discovery
+- AI-powered commuting assistance
+
+---
+
+##  Current MVP
+
+The first version focuses on validating demand by providing:
+
+- Beautiful landing page
+- Route search interface
+- Fare estimation
+- Community transport data collection
+- Responsive mobile-first design
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide Icons
+- shadcn/ui
+
+### Future Backend
+
+- NestJS
+- PostgreSQL
+- Prisma ORM
+- Redis
+- Mapbox API
+- Cloudinary
+- Better Auth
+
+---
+
+## 📁 Project Structure
+
+```text
+src/
+├── app/
+├── components/
+│   ├── home/
+│   ├── layout/
+│   ├── map/
+│   ├── search/
+│   ├── shared/
+│   └── ui/
+├── constants/
+├── contexts/
+├── hooks/
+├── lib/
+├── services/
+└── types/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎨 Brand Colors
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Color | Hex |
+|--------|------|
+| Growth Green | #22C55E |
+| Lagoon Teal | #06B5D4 |
+| Lens Blue | #2563EB |
+| Midnight Navy | #0F172A |
+| White | #F8FAFC |
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🌍 Roadmap
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [x] Landing Page
+- [x] Branding
+- [ ] Route Search
+- [ ] Fare Engine
+- [ ] Route Results
+- [ ] Community Reports
+- [ ] Smart Recommendations
+- [ ] User Accounts
+- [ ] Business Listings
+- [ ] EkoMap
+- [ ] EkoRide
+- [ ] AI Trip Planner
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🤝 Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+EkoLens is currently in active development.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+We welcome ideas, feedback, and future contributions as we build the future of urban mobility in Lagos.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+Made with ❤️ in Lagos, Nigeria.
