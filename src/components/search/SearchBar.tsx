@@ -4,8 +4,10 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { MapPin, Navigation, ArrowUpDown, Search } from "lucide-react";
 import { useTheme } from "@/contexts/ThemeContext";
+import { useRouter } from "next/navigation";
 
 export default function SearchBar() {
+  const router = useRouter();
   const { theme } = useTheme();
   const c = theme.colors;
   const [from, setFrom] = useState("");
@@ -66,14 +68,23 @@ export default function SearchBar() {
       </div>
 
       <button
-        className="w-full mt-4 flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl font-semibold text-white transition hover:scale-[1.02]"
-        style={{
-          backgroundImage: `linear-gradient(to right, ${c.primary}, ${c.primaryLight})`,
-        }}
-      >
-        <Search size={18} />
+         onClick={() => {
+         if (!from || !to) return;
+
+        router.push(
+          `/search/results?from=${encodeURIComponent(
+            from
+         )}&to=${encodeURIComponent(to)}`
+       );
+     }}
+       className="w-full mt-4 flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl font-semibold text-white transition hover:scale-[1.02]"
+       style={{
+       backgroundImage: `linear-gradient(to right, ${c.primary}, ${c.primaryLight})`,
+     }}
+    >
+      <Search size={18} />
         Search Route
-      </button>
-    </motion.div>
-  );
-}
+    </button>
+      </motion.div>
+    );
+ }

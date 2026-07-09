@@ -1,0 +1,68 @@
+import { Route } from "@/types/route";
+
+export const routes: Route[] = [
+  {
+    id: 1,
+    from: "Agric",
+    to: "Adeniji",
+    transport: ["Danfo"],
+    boardingPoint: "Agric, Ikorodu",
+    route: [
+      "Agric",
+      "Ogolonto",
+      "Majidun",
+      "Owode",
+      "Mile 12",
+      "Ketu",
+      "Ogudu",
+      "Ifako",
+      "Alapere",
+      "Berger",
+      "Third Mainland Bridge",
+      "Adeniji",
+    ],
+    dropOff: "Adeniji Adele",
+    landmark: "Adeniji",
+    fare: 2000,
+    duration: 90,
+    safety: "Safe",
+    traffic: "Moderate",
+  },
+
+  {
+    id: 2,
+    from: "Ojuelegba",
+    to: "Ikeja",
+    transport: ["Danfo", "Korope"],
+    boardingPoint: "Ojuelegba Bus Stop",
+    route: [
+      "Ojuelegba",
+      "Ikorodu Road",
+      "Ikeja",
+    ],
+    dropOff: "Ikeja",
+    landmark: "Ikeja Under Bridge",
+    fare: 800,
+    duration: 40,
+    safety: "Safe",
+    traffic: "Moderate",
+  },
+
+  {
+    id: 3,
+    from: "Ajah",
+    to: "Lekki Phase 1",
+    transport: ["Korope"],
+    boardingPoint: "Ajah",
+    route: [
+      "Ajah",
+      "Lekki Phase 1",
+    ],
+    dropOff: "Lekki Phase 1",
+    landmark: "Estate Gate",
+    fare: 1500,
+    duration: 60,
+    safety: "Safe",
+    traffic: "Moderate",
+  },
+];
