@@ -1,5 +1,7 @@
 "use client";
 
+export const dynamic = "force-dynamic";
+
 import { useSearchParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ArrowLeft, Bus, Car, CarTaxiFront, Train, Footprints, ChevronRight, Loader2, Route } from "lucide-react";
@@ -73,7 +75,6 @@ export default function SearchResultsPage() {
 
   const handleSelectOption = (option: any) => {
     const selectedRoute = plan.routes[selectedRouteIdx];
-    // Store in the same shape the journey page already expects (plan.route singular)
     const journeyPlan = { route: selectedRoute, journeyGuide: plan.journeyGuide };
     sessionStorage.setItem("ekolens:lastPlan", JSON.stringify(journeyPlan));
     sessionStorage.setItem("ekolens:selectedOption", JSON.stringify(option));
@@ -113,7 +114,6 @@ export default function SearchResultsPage() {
 
         {plan && !loading && (
           <>
-            {/* Route alternatives — real distinct paths from GraphHopper */}
             <p className="mt-5 mb-2 text-xs font-semibold uppercase tracking-wide" style={{ color: c.textMuted }}>
               {plan.routes.length > 1 ? "Choose your road route" : "Route"}
             </p>
