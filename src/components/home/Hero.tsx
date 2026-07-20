@@ -160,12 +160,6 @@ export default function Hero() {
                 Get Started
               </button>
             </Link>
-            <button
-              className="flex items-center gap-2 px-6 py-3 rounded-full font-medium border transition hover:opacity-80"
-              style={{ borderColor: c.border, color: c.text, backgroundColor: c.surface }}
-            >
-              <Play size={16} /> Watch Demo
-            </button>
           </motion.div>
 
           <motion.div
