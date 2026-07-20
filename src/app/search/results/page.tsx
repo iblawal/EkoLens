@@ -2,6 +2,7 @@
 
 export const dynamic = "force-dynamic";
 
+import { Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ArrowLeft, Bus, Car, CarTaxiFront, Train, Footprints, ChevronRight, Loader2, Route } from "lucide-react";
@@ -27,7 +28,7 @@ function formatDuration(seconds: number) {
   return `${h}hr${m > 0 ? ` ${m}mins` : ""}`;
 }
 
-export default function SearchResultsPage() {
+function SearchResultsContent() {
   const params = useSearchParams();
   const router = useRouter();
   const { theme } = useTheme();
@@ -198,5 +199,19 @@ export default function SearchResultsPage() {
         )}
       </div>
     </main>
+  );
+}
+
+export default function SearchResultsPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen flex items-center justify-center">
+          <Loader2 size={28} className="animate-spin" />
+        </div>
+      }
+    >
+      <SearchResultsContent />
+    </Suspense>
   );
 }
