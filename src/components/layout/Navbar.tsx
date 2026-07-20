@@ -69,14 +69,16 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
-          <button
-            className="px-5 py-2.5 rounded-full text-sm font-medium text-white transition hover:scale-105"
-            style={{
-              backgroundImage: "linear-gradient(to right, " + c.primary + ", " + c.primaryLight + ")",
-            }}
-          >
-            Get Started
-          </button>
+          <Link href="/plan">
+            <button
+              className="px-5 py-2.5 rounded-full text-sm font-medium text-white transition hover:scale-105"
+              style={{
+                backgroundImage: "linear-gradient(to right, " + c.primary + ", " + c.primaryLight + ")",
+              }}
+            >
+              Get Started
+            </button>
+          </Link>
         </div>
 
         <button
@@ -113,16 +115,16 @@ export default function Navbar() {
                   </AnchorTag>
                 );
               })}
-              <Link href="/search">
-            <button
-              className="px-5 py-2.5 rounded-full text-sm font-medium text-white transition hover:scale-105"
-              style={{
-                backgroundImage: "linear-gradient(to right, " + c.primary + ", " + c.primaryLight + ")",
-              }}
-            >
-              Get Started
-            </button>
-          </Link>
+              <Link href="/plan" onClick={() => setOpen(false)}>
+                <button
+                  className="w-full px-5 py-2.5 rounded-full text-sm font-medium text-white transition hover:scale-105"
+                  style={{
+                    backgroundImage: "linear-gradient(to right, " + c.primary + ", " + c.primaryLight + ")",
+                  }}
+                >
+                  Get Started
+                </button>
+              </Link>
             </div>
           </motion.div>
         )}

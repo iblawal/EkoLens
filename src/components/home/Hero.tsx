@@ -50,7 +50,6 @@ const categories = [
   { icon: MapPin, label: "Landmark", sub: "Details & Info" },
 ];
 
-
 export default function Hero() {
   const { theme } = useTheme();
   const c = theme.colors;
@@ -151,16 +150,16 @@ export default function Hero() {
           </motion.p>
 
           <motion.div variants={fadeFromLeft} className="mt-8 flex flex-wrap gap-4">
-            <Link href="/search">
-            <button
-              className="px-5 py-2.5 rounded-full text-sm font-medium text-white transition hover:scale-105"
-              style={{
-                backgroundImage: "linear-gradient(to right, " + c.primary + ", " + c.primaryLight + ")",
-              }}
-            >
-              Get Started
-            </button>
-          </Link>
+            <Link href="/plan">
+              <button
+                className="px-5 py-2.5 rounded-full text-sm font-medium text-white transition hover:scale-105"
+                style={{
+                  backgroundImage: "linear-gradient(to right, " + c.primary + ", " + c.primaryLight + ")",
+                }}
+              >
+                Get Started
+              </button>
+            </Link>
             <button
               className="flex items-center gap-2 px-6 py-3 rounded-full font-medium border transition hover:opacity-80"
               style={{ borderColor: c.border, color: c.text, backgroundColor: c.surface }}
